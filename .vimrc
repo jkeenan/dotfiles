@@ -12,6 +12,7 @@ set tabstop=4
 set expandtab
 set shiftwidth=4
 set shiftround
+set backspace=indent,eol,start
 
 set history=50
 
@@ -38,3 +39,7 @@ map ,pm :!perl Makefile.PL;make;make test<CR>
 map ,prb :!prove -vb %<CR>
 map ,prba :!prove -vb t/*.t<CR>
 
+" bash commands
+map ,icaa :r /home/jkeenan/.import_com.atomicscala.AtomicTest._
+
+set modeline
