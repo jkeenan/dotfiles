@@ -60,4 +60,10 @@ mygitwork ()
     find $GIT_WORKDIR -maxdepth 1 -type d | ack -v '(gitwork|perl|perl2|perl-security|zzzothers)$' | sort
 }
 
+# Nov 23 2026
+gitnextsha ()
+{
+    BRANCH=`git branch | grep \* | sed -e 's/^\* //'`
+    echo `git rev-list --ancestry-path $1..$BRANCH --reverse | head -n 1`
+}
 
